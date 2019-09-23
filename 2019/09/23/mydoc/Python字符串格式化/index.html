@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python字符串格式化函数 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Python字符串格式化函数str.format()函数类似于Qt中的QString().arg()|Python|C++|输出|说明||:-|:-|:-|:-||”{} {}”.format(“hello”, “world”)|QString(“%1 %2”).arg(“hello”).arg(“world”);|hello world|按照默认顺序不指定位置||”{0} {1} {0}”.fo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python字符串格式化函数">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/mydoc/Python字符串格式化/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Python字符串格式化函数str.format()函数类似于Qt中的QString().arg()|Python|C++|输出|说明||:-|:-|:-|:-||”{} {}”.format(“hello”, “world”)|QString(“%1 %2”).arg(“hello”).arg(“world”);|hello world|按照默认顺序不指定位置||”{0} {1} {0}”.fo">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-23T03:21:19.144Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python字符串格式化函数">
+<meta name="twitter:description" content="Python字符串格式化函数str.format()函数类似于Qt中的QString().arg()|Python|C++|输出|说明||:-|:-|:-|:-||”{} {}”.format(“hello”, “world”)|QString(“%1 %2”).arg(“hello”).arg(“world”);|hello world|按照默认顺序不指定位置||”{0} {1} {0}”.fo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mydoc/Python字符串格式化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/23/mydoc/Python字符串格式化/" class="article-date">
+  <time datetime="2019-09-23T03:21:19.144Z" itemprop="datePublished">2019-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python字符串格式化函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h3 id="字符串格式化函数"><a href="#字符串格式化函数" class="headerlink" title="字符串格式化函数"></a>字符串格式化函数</h3><p>str.format()函数类似于Qt中的QString().arg()<br>|Python|C++|输出|说明|<br>|:-|:-|:-|:-|<br>|”{} {}”.format(“hello”, “world”)|QString(“%1 %2”).arg(“hello”).arg(“world”);|hello world|按照默认顺序<br>不指定位置|<br>|”{0} {1} {0}”.format(“hello”,”or”)|QString(“%1 %2 %1”).arg(“hello”).arg(“world”);|hello or hello|设置指定位置<br>可以多次使用|<br>|person = {“name”:”opcai”,”age”:20} print(“My name is {name} . I am {age} years old .”.format(**person))|||使用列表格式化|<br>|stu = [“opcai”,”linux”,”MySQL”,”Python”] print(“My name is {0[0]} , I love {0[1]} !”.format(stu))|||通过列表格式化|</p>
+<h4 id="数字格式化"><a href="#数字格式化" class="headerlink" title="数字格式化"></a>数字格式化</h4><p>和C++类似，可以使用占位符来对数字进行格式化</p>
+<table>
+<thead>
+<tr>
+<th align="left">数字</th>
+<th align="left">格式</th>
+<th align="left">输出</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">3.1415926</td>
+<td align="left">{:.2f}</td>
+<td align="left">3.14</td>
+<td align="left">保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">3.1415926</td>
+<td align="left">{:+.2f}</td>
+<td align="left">+3.14</td>
+<td align="left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">-1</td>
+<td align="left">{:+.2f}</td>
+<td align="left">-1.00</td>
+<td align="left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td align="left">2.71828</td>
+<td align="left">{:.0f}</td>
+<td align="left">3</td>
+<td align="left">不带小数</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">{:0&gt;2d}</td>
+<td align="left">05</td>
+<td align="left">数字补零</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">{:x&lt;4d}</td>
+<td align="left">5xxx</td>
+<td align="left">数字补x</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">{:x&lt;4d}</td>
+<td align="left">10xx</td>
+<td align="left">数字补x</td>
+</tr>
+<tr>
+<td align="left">1000000</td>
+<td align="left">{:,}</td>
+<td align="left">1,000,000</td>
+<td align="left">以逗号分隔的数字格式</td>
+</tr>
+<tr>
+<td align="left">0.25</td>
+<td align="left">{:.2%}</td>
+<td align="left">25.00%</td>
+<td align="left">百分比格式</td>
+</tr>
+<tr>
+<td align="left">1000000000</td>
+<td align="left">{:.2e}</td>
+<td align="left">1.00e+09</td>
+<td align="left">指数记法</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:10d}</td>
+<td align="left">13</td>
+<td align="left">右对齐</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:&lt;10d}</td>
+<td align="left">13</td>
+<td align="left">左对齐</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">{:^10d}</td>
+<td align="left">13</td>
+<td align="left">中间对齐</td>
+</tr>
+</tbody></table>
+<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><table>
+<thead>
+<tr>
+<th align="left">数字</th>
+<th align="left">格式</th>
+<th align="left">输出</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">11</td>
+<td align="left">‘{:b}’.format(11)</td>
+<td align="left">1011</td>
+<td align="left">二进制</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">‘{:d}’.format(11)</td>
+<td align="left">11</td>
+<td align="left">十进制</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">‘{:o}’.format(11)</td>
+<td align="left">13</td>
+<td align="left">八进制</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">‘{:x}’.format(11)</td>
+<td align="left">b</td>
+<td align="left">十六进制</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">‘{:#x}’.format(11)</td>
+<td align="left">0xb</td>
+<td align="left">十六进制</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">‘{:#X}’.format(11)</td>
+<td align="left">0XB</td>
+<td align="left">十六进制</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/23/mydoc/Python字符串格式化/" data-id="ck0vuh91s0003a8vugpmp6ms5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/23/mydoc/QWebView_Find_Dom/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          QWebView中查找dom元素所在位置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/23/mydoc/Crontab/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Crontab语法与常用命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">通过js2py在Python中执行JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/拼图匠2.1接口/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/vs code中集成cmder/">VS Code中集成Cmder</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/server_config/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/pymongo用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

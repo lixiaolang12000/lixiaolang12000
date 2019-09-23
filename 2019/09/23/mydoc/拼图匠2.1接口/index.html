@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title:拼图匠2.1接口   拼图匠2.1接口 1.个人中心 1.1 登陆 /puzzle/login 1.2 用户信息 /puzzle/user-info 1.3 签到 /puzzle/checkin 1.4 AI滤镜解锁状态 /puzzle/ai-status 1.5 解锁AI滤镜 /puzzle/ai-unlock 1.6 保存照片到私人相册 /puzzle/save-album 1.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/mydoc/拼图匠2.1接口/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title:拼图匠2.1接口   拼图匠2.1接口 1.个人中心 1.1 登陆 /puzzle/login 1.2 用户信息 /puzzle/user-info 1.3 签到 /puzzle/checkin 1.4 AI滤镜解锁状态 /puzzle/ai-status 1.5 解锁AI滤镜 /puzzle/ai-unlock 1.6 保存照片到私人相册 /puzzle/save-album 1.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-23T03:21:19.154Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title:拼图匠2.1接口   拼图匠2.1接口 1.个人中心 1.1 登陆 /puzzle/login 1.2 用户信息 /puzzle/user-info 1.3 签到 /puzzle/checkin 1.4 AI滤镜解锁状态 /puzzle/ai-status 1.5 解锁AI滤镜 /puzzle/ai-unlock 1.6 保存照片到私人相册 /puzzle/save-album 1.">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mydoc/拼图匠2.1接口" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/23/mydoc/拼图匠2.1接口/" class="article-date">
+  <time datetime="2019-09-23T03:21:19.154Z" itemprop="datePublished">2019-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-拼图匠2-1接口"><a href="#title-拼图匠2-1接口" class="headerlink" title="title:拼图匠2.1接口"></a>title:拼图匠2.1接口</h2><!-- TOC -->
+
+<ul>
+<li><a href="#拼图匠21接口">拼图匠2.1接口</a><ul>
+<li><a href="#1个人中心">1.个人中心</a><ul>
+<li><a href="#11-登陆-puzzlelogin">1.1 登陆 <code>/puzzle/login</code></a></li>
+<li><a href="#12-用户信息-puzzleuser-info">1.2 用户信息 <code>/puzzle/user-info</code></a></li>
+<li><a href="#13-签到-puzzlecheckin">1.3 签到 <code>/puzzle/checkin</code></a></li>
+<li><a href="#14-ai滤镜解锁状态-puzzleai-status">1.4 AI滤镜解锁状态 <code>/puzzle/ai-status</code></a></li>
+<li><a href="#15-解锁ai滤镜-puzzleai-unlock">1.5 解锁AI滤镜 <code>/puzzle/ai-unlock</code></a></li>
+<li><a href="#16-保存照片到私人相册-puzzlesave-album">1.6 保存照片到私人相册 <code>/puzzle/save-album</code></a></li>
+<li><a href="#17-魔盒中奖信息-puzzlemagic-win-info">1.7 魔盒中奖信息 <code>/puzzle/magic-win-info</code></a></li>
+<li><a href="#18-魔盒抽奖-puzzlemagic-lucy-draw">1.8 魔盒抽奖 <code>/puzzle/magic-lucy-draw</code></a></li>
+<li><a href="#19-金币流水-puzzleuser-coin-records">1.9 金币流水 <code>/puzzle/user-coin-records</code></a></li>
+</ul>
+</li>
+<li><a href="#2相册">2.相册</a><ul>
+<li><a href="#21-获取相册列表-puzzleuser-album">2.1 获取相册列表 <code>/puzzle/user-album</code></a></li>
+<li><a href="#22-分页获取相册详情-puzzlealbum-detail">2.2 分页获取相册详情 <code>/puzzle/album-detail</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h1 id="拼图匠2-1接口"><a href="#拼图匠2-1接口" class="headerlink" title="拼图匠2.1接口"></a>拼图匠2.1接口</h1><h2 id="1-个人中心"><a href="#1-个人中心" class="headerlink" title="1.个人中心"></a>1.个人中心</h2><h3 id="1-1-登陆-puzzle-login"><a href="#1-1-登陆-puzzle-login" class="headerlink" title="1.1 登陆 /puzzle/login"></a>1.1 登陆 <code>/puzzle/login</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="string">"usercode"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="string">"nickname"</span>: <span class="string">"BB"</span>,</span><br><span class="line">	<span class="string">"avatar"</span>: <span class="string">"url"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"uid"</span>: <span class="string">"xxx"</span>	<span class="comment">//个人中心的用户id</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-用户信息-puzzle-user-info"><a href="#1-2-用户信息-puzzle-user-info" class="headerlink" title="1.2 用户信息 /puzzle/user-info"></a>1.2 用户信息 <code>/puzzle/user-info</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;        </span><br><span class="line">        <span class="string">"avatar"</span>: <span class="string">"http://cdn.tgp.qq.com/lol/images/resources/champions/22.png"</span>,	<span class="comment">//用户头像</span></span><br><span class="line">        <span class="string">"coin"</span>: <span class="number">30</span>,	<span class="comment">//金币数</span></span><br><span class="line">        <span class="string">"checkin"</span>: &#123;            </span><br><span class="line">            <span class="string">"total_check_id_days"</span>: <span class="number">3</span>,	<span class="comment">//昨日连续签到天数</span></span><br><span class="line">            <span class="string">"newbie_task"</span>: &#123;	<span class="comment">//新手任务</span></span><br><span class="line">				<span class="string">"mystery_gift"</span>: <span class="number">0</span>,</span><br><span class="line">				<span class="string">"first_checkin"</span>: <span class="number">1</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">"daily_task"</span>: &#123;		<span class="comment">//每日任务，数字表示完成次数</span></span><br><span class="line">            	<span class="string">"share_image"</span>: <span class="number">1</span>,	</span><br><span class="line">            	<span class="string">"checkin"</span>: <span class="number">1</span>,</span><br><span class="line">            	<span class="string">"open_magic_box"</span>: <span class="number">3</span></span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-签到-puzzle-checkin"><a href="#1-3-签到-puzzle-checkin" class="headerlink" title="1.3 签到 /puzzle/checkin"></a>1.3 签到 <code>/puzzle/checkin</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//1.今日已签到</span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-AI滤镜解锁状态-puzzle-ai-status"><a href="#1-4-AI滤镜解锁状态-puzzle-ai-status" class="headerlink" title="1.4 AI滤镜解锁状态 /puzzle/ai-status"></a>1.4 AI滤镜解锁状态 <code>/puzzle/ai-status</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"lists"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/la_muse.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"la_muse"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"油画"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,	<span class="comment">//解锁消耗金币数</span></span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span>			<span class="comment">//是否已经解锁</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/feathers.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"feathers"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"彩色羽毛"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">false</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/edtaonisl.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"edtaonisl"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"印象主义"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/mosaic.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"mosaic"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"马赛克"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/udnie.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"udnie"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"油画"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/wave.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"wave"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"浮世绘"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/the_scream.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"the_scream"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"呐喊"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/black.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"black"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"素描"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-解锁AI滤镜-puzzle-ai-unlock"><a href="#1-5-解锁AI滤镜-puzzle-ai-unlock" class="headerlink" title="1.5 解锁AI滤镜 /puzzle/ai-unlock"></a>1.5 解锁AI滤镜 <code>/puzzle/ai-unlock</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: la_muse,</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//1.金币不足，2.已经解锁</span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-6-保存照片到私人相册-puzzle-save-album"><a href="#1-6-保存照片到私人相册-puzzle-save-album" class="headerlink" title="1.6 保存照片到私人相册 /puzzle/save-album"></a>1.6 保存照片到私人相册 <code>/puzzle/save-album</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"filename"</span>: <span class="string">"xxx.jpg"</span>	<span class="comment">//通过upload上传的图片名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-7-魔盒中奖信息-puzzle-magic-win-info"><a href="#1-7-魔盒中奖信息-puzzle-magic-win-info" class="headerlink" title="1.7 魔盒中奖信息 /puzzle/magic-win-info"></a>1.7 魔盒中奖信息 <code>/puzzle/magic-win-info</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"infomation"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">            	<span class="string">"user"</span>: <span class="string">"zhaowei"</span>,</span><br><span class="line">                <span class="string">"content"</span>: <span class="string">"兰博基尼5元代金券"</span>,</span><br><span class="line">                <span class="string">"time"</span>: <span class="number">1552295085</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-8-魔盒抽奖-puzzle-magic-lucy-draw"><a href="#1-8-魔盒抽奖-puzzle-magic-lucy-draw" class="headerlink" title="1.8 魔盒抽奖 /puzzle/magic-lucy-draw"></a>1.8 魔盒抽奖 <code>/puzzle/magic-lucy-draw</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//0.成功 1.次数不足 2.金币不足 </span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"award"</span>: &#123;</span><br><span class="line">            <span class="string">"type"</span>: <span class="number">1</span>,	<span class="comment">//1.金币 2.现金</span></span><br><span class="line">            <span class="string">"count"</span>: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-9-金币流水-puzzle-user-coin-records"><a href="#1-9-金币流水-puzzle-user-coin-records" class="headerlink" title="1.9 金币流水 /puzzle/user-coin-records"></a>1.9 金币流水 <code>/puzzle/user-coin-records</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"start"</span>: <span class="number">0</span>,		<span class="comment">//开始序号</span></span><br><span class="line">    <span class="string">"limit"</span>: <span class="number">20</span>,	<span class="comment">//数量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">    	<span class="string">"coin"</span>: <span class="number">50</span>,	<span class="comment">//用户当前金币数量</span></span><br><span class="line">    	<span class="string">"record"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"type"</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="string">"desc"</span>: <span class="string">"分享奖励"</span>,</span><br><span class="line">                <span class="string">"award"</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="string">"time"</span>: <span class="number">1552296276</span></span><br><span class="line">            &#125;</span><br><span class="line">    	]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-相册"><a href="#2-相册" class="headerlink" title="2.相册"></a>2.相册</h2><h3 id="2-1-获取相册列表-puzzle-user-album"><a href="#2-1-获取相册列表-puzzle-user-album" class="headerlink" title="2.1 获取相册列表 /puzzle/user-album"></a>2.1 获取相册列表 <code>/puzzle/user-album</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"lists"</span>:[</span><br><span class="line">            &#123;</span><br><span class="line">            	<span class="string">"id"</span>: <span class="number">123</span>,	<span class="comment">//相册id</span></span><br><span class="line">                <span class="string">"author"</span>: <span class="string">"二棒"</span>,</span><br><span class="line">                <span class="string">"create_time"</span>: <span class="number">1552286036</span>,</span><br><span class="line">                <span class="string">"cover_img"</span>: <span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1552296179869&amp;di=6fa038814548cd9b07c69072359efead&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201604%2F18%2F20160418131839_5fNxP.jpeg"</span>,</span><br><span class="line">                <span class="string">"type"</span>: <span class="number">1</span>	<span class="comment">//1.私人相册，2.用户相册</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-分页获取相册详情-puzzle-album-detail"><a href="#2-2-分页获取相册详情-puzzle-album-detail" class="headerlink" title="2.2 分页获取相册详情 /puzzle/album-detail"></a>2.2 分页获取相册详情 <code>/puzzle/album-detail</code></h3><ul>
+<li>req</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"photoalbum_id"</span>: <span class="number">123</span>,	<span class="comment">//相册id</span></span><br><span class="line">    <span class="string">"start"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"limit"</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>response</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">         <span class="string">"photos"</span>: [</span><br><span class="line">             &#123;</span><br><span class="line">             	<span class="string">"time"</span>: <span class="number">1552296276</span>,</span><br><span class="line">             	<span class="string">"url"</span>: <span class="string">"https://123.jpg"</span>,</span><br><span class="line">             	<span class="string">"thumb"</span>: <span class="string">"https://123.jpg"</span></span><br><span class="line">         	&#125;</span><br><span class="line">         ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/23/mydoc/拼图匠2.1接口/" data-id="ck0vuh93k000fa8vusq9eqnzi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          通过js2py在Python中执行JavaScript
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/23/mydoc/vs code中集成cmder/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">VS Code中集成Cmder</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">通过js2py在Python中执行JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/拼图匠2.1接口/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/vs code中集成cmder/">VS Code中集成Cmder</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/server_config/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/pymongo用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

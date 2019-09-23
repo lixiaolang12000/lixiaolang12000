@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Crontab语法与常用命令 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="命令 新建或修改任务，默认使用VI编辑器，如需切换可使用12```bashcrontab -e	#maybe you need &amp;apos;sudo crontab -e&amp;apos;  列出用户当前的任务 1crontab -l  删除用户当前的任务 1crontab -r    语法转自Linux下Crontab的格式及含义 crontab基本格式   f1 f2 f3 f4 f5 comman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crontab语法与常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/mydoc/Crontab/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="命令 新建或修改任务，默认使用VI编辑器，如需切换可使用12```bashcrontab -e	#maybe you need &amp;apos;sudo crontab -e&amp;apos;  列出用户当前的任务 1crontab -l  删除用户当前的任务 1crontab -r    语法转自Linux下Crontab的格式及含义 crontab基本格式   f1 f2 f3 f4 f5 comman">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-23T03:21:19.142Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Crontab语法与常用命令">
+<meta name="twitter:description" content="命令 新建或修改任务，默认使用VI编辑器，如需切换可使用12```bashcrontab -e	#maybe you need &amp;apos;sudo crontab -e&amp;apos;  列出用户当前的任务 1crontab -l  删除用户当前的任务 1crontab -r    语法转自Linux下Crontab的格式及含义 crontab基本格式   f1 f2 f3 f4 f5 comman">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mydoc/Crontab" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/23/mydoc/Crontab/" class="article-date">
+  <time datetime="2019-09-23T03:21:19.142Z" itemprop="datePublished">2019-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Crontab语法与常用命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
+<li><p>新建或修改任务，默认使用VI编辑器，如需切换可使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```bash</span><br><span class="line">crontab -e	#maybe you need &apos;sudo crontab -e&apos;</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>列出用户当前的任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -l</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除用户当前的任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -r</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>转自<a href="https://www.cnblogs.com/angel_kiki/p/5266699.html" target="_blank" rel="noopener">Linux下Crontab的格式及含义</a></p>
+<h3 id="crontab基本格式"><a href="#crontab基本格式" class="headerlink" title="crontab基本格式"></a>crontab基本格式</h3><table>
+<thead>
+<tr>
+<th align="center">f1</th>
+<th align="center">f2</th>
+<th align="center">f3</th>
+<th align="center">f4</th>
+<th align="center">f5</th>
+<th align="center">command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">分</td>
+<td align="center">时</td>
+<td align="center">日</td>
+<td align="center">月</td>
+<td align="center">周</td>
+<td align="center">命令</td>
+</tr>
+</tbody></table>
+<ol>
+<li>第一列f1代表分钟1~59<ul>
+<li>当f1为<code>*</code>表示每分钟都要执行</li>
+<li>为<code>*/n</code>表示每n分钟执行一次；为a-b表示从第a分钟到第b分钟这段时间要执行</li>
+<li>为<code>a,b,c</code>表示第a,b,c分钟要执行</li>
+</ul>
+</li>
+<li>第二列f2代表小时0~23（0表示凌晨）<ul>
+<li>当f2为<code>*</code>表示每小时都要执行</li>
+<li>为<code>*/n</code>表示每n小数执行一次</li>
+<li>为<code>a-b</code>表示从第a小时到第b小时这段时间要执行</li>
+<li>为<code>a,b,c</code>表示第a,b,c小时要执行</li>
+</ul>
+</li>
+<li>第三列f3代表日1~31：含义如上所示，以此类推</li>
+<li>第四列f4代表月1~12：含义如上所示，以此类推</li>
+<li>第五列f5代表星期0~6（0表示星期天）：含义如上所示，以此类推</li>
+<li>第六列command代表要运行的命令</li>
+</ol>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>每晚的21:30重启apache。</li>
+</ul>
+<blockquote>
+<p>30 21 * * * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每月1、10、22日的4 : 45重启apache。</li>
+</ul>
+<blockquote>
+<p>45 4 1,10,22 * * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每周六、周日的1 : 10重启apache。</li>
+</ul>
+<blockquote>
+<p>10 1 * * 6,0 /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每天18 : 00至23 : 00之间每隔30分钟重启apache。</li>
+</ul>
+<blockquote>
+<p>0,30 18-23 * * * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每星期六的23 : 00 重启apache。</li>
+</ul>
+<blockquote>
+<p>0 23 * * 6 /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每一小时重启apache</li>
+</ul>
+<blockquote>
+<p>* */1 * * * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>晚上11点到早上7点之间，每隔一小时重启apache</li>
+</ul>
+<blockquote>
+<p>* 23-7/1 * * * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>每月的4号与每周一到周三的11点重启apache</li>
+</ul>
+<blockquote>
+<p>0 11 4 * mon-wed /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+<ul>
+<li>一月一号的4点重启apache</li>
+</ul>
+<blockquote>
+<p>0 4 1 jan * /usr/local/apache/bin/apachectl restart</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/23/mydoc/Crontab/" data-id="ck0vuh91n0002a8vu1et0e12f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/23/mydoc/Python字符串格式化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python字符串格式化函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">通过js2py在Python中执行JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/拼图匠2.1接口/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/vs code中集成cmder/">VS Code中集成Cmder</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/server_config/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/pymongo用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

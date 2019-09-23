@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Mongo简介 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] Mongo简介1.Mongo数据库介绍1.1 NoSqlMongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。 举个简单的例子，假如我们有一个user表，用来存储用户的信息，其中包括uid、name、age，那么在MySQL这样的关系型数据库中，他可能长这样：    字段 类型    uid int   name varchar(50)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mongo简介">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/mydoc/mongo简介/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] Mongo简介1.Mongo数据库介绍1.1 NoSqlMongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。 举个简单的例子，假如我们有一个user表，用来存储用户的信息，其中包括uid、name、age，那么在MySQL这样的关系型数据库中，他可能长这样：    字段 类型    uid int   name varchar(50)">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-23T03:21:19.150Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mongo简介">
+<meta name="twitter:description" content="[TOC] Mongo简介1.Mongo数据库介绍1.1 NoSqlMongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。 举个简单的例子，假如我们有一个user表，用来存储用户的信息，其中包括uid、name、age，那么在MySQL这样的关系型数据库中，他可能长这样：    字段 类型    uid int   name varchar(50)">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mydoc/mongo简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/23/mydoc/mongo简介/" class="article-date">
+  <time datetime="2019-09-23T03:21:19.150Z" itemprop="datePublished">2019-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mongo简介
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="Mongo简介"><a href="#Mongo简介" class="headerlink" title="Mongo简介"></a>Mongo简介</h1><h1 id="1-Mongo数据库介绍"><a href="#1-Mongo数据库介绍" class="headerlink" title="1.Mongo数据库介绍"></a>1.Mongo数据库介绍</h1><h1 id="1-1-NoSql"><a href="#1-1-NoSql" class="headerlink" title="1.1 NoSql"></a>1.1 NoSql</h1><p>MongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。</p>
+<p>举个简单的例子，假如我们有一个user表，用来存储用户的信息，其中包括uid、name、age，那么在MySQL这样的关系型数据库中，他可能长这样：</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>uid</td>
+<td>int</td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar(50)</td>
+</tr>
+<tr>
+<td>age</td>
+<td>int</td>
+</tr>
+</tbody></table>
+<p>在MongoDB中他可能长这样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="number">123</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"aaa"</span>,</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看上去似乎没什么区别，如果我们有一个需求，需要在数据库中存储用户的自定义信息，让用户自己来添加，比如<code>头像</code>、<code>地区</code>、<code>爱好</code>之类的，那么MySql就有点头疼了，你可能需要先在数据库中添加三个字段，然后才能进行Inset操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE user ADD avartar VARCHAR(255), area VARCHAR(50), favorite VARCHAR(50)</span><br></pre></td></tr></table></figure>
+
+<p>在MongoDB里面，我们什么都不需要操作，只需要向数据库里面写数据就行了，数据的存储没有固定的模式，数据的横向扩展是很容易的。</p>
+<h2 id="1-2-连接"><a href="#1-2-连接" class="headerlink" title="1.2 连接"></a>1.2 连接</h2><p>用工具，用代码，无论用啥，要使用数据库需要先进行连接，语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>mongodb://</strong> 这是固定的格式，必须要指定。</li>
+<li><strong>username:password@</strong> 可选项，如果设置，在连接数据库服务器之后，驱动都会尝试登陆这个数据库</li>
+<li><strong>host1</strong> 必须的指定至少一个host, host1 是这个URI唯一要填写的。它指定了要连接服务器的地址。如果要连接复制集，请指定多个主机地址。</li>
+<li><strong>portX</strong> 可选的指定端口，如果不填，默认为27017</li>
+<li><strong>/database</strong> 如果指定username:password@，连接并验证登陆指定数据库。若不指定，默认打开 test 数据库。</li>
+<li><strong>?options</strong> 是连接选项。如果不使用/database，则前面需要加上/。所有连接选项都是键值对name=value，键值对之间通过&amp;或;（分号）隔开</li>
+</ul>
+<p>这其实就是一个标准的URL格式。</p>
+<h2 id="1-3-创建数据库"><a href="#1-3-创建数据库" class="headerlink" title="1.3 创建数据库"></a>1.3 创建数据库</h2><h2 id="1-4-删除数据库"><a href="#1-4-删除数据库" class="headerlink" title="1.4 删除数据库"></a>1.4 删除数据库</h2><h2 id="1-5-创建集合"><a href="#1-5-创建集合" class="headerlink" title="1.5 创建集合"></a>1.5 创建集合</h2><p>MongoDB数据库中，用集合(<code>collection</code>)来表示关系数据库中的表(<code>table</code>)，通常情况下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(name, options)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>name: 要创建的集合名称</li>
+<li>options: 可选参数, 指定有关内存大小及索引的选项</li>
+</ul>
+<p>通常情况下，MongoDB不需要事先创建集合，系统会在用户插入文档的适合自动创建，当然，处于规范，一般会由DBA先创建需要的集合以及相应的<code>索引</code></p>
+<h2 id="1-6-删除集合"><a href="#1-6-删除集合" class="headerlink" title="1.6 删除集合"></a>1.6 删除集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.drop()</span><br></pre></td></tr></table></figure>
+
+<p>希望你不会用到这条命令。</p>
+<h2 id="1-7-插入文档"><a href="#1-7-插入文档" class="headerlink" title="1.7 插入文档"></a>1.7 插入文档</h2><p>插入一条文档：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insert(document)</span><br></pre></td></tr></table></figure>
+
+<p>这里的document和<code>Json</code>格式基本一致，所有存储在集合中的数据都是<code>BSON</code>格式。<code>BSON</code> 是一种类似 <code>Json</code>的二进制形式的存储格式，是 <code>Binary JSON</code> 的简称。具体细节可以查看官方文档</p>
+<p>插入多条文档：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insertMany(document_array)</span><br></pre></td></tr></table></figure>
+
+<p><strong>尽量不要在循环中执行insert来一条一条的插入数据，应该使用insertMany来处理需要一次性插入多条数据的场景</strong></p>
+<h3 id="1-7-1-ObjectId"><a href="#1-7-1-ObjectId" class="headerlink" title="1.7.1 ObjectId"></a>1.7.1 ObjectId</h3><p>MongoDb会为每一条文档添加一个<code>_id</code>字段，类型是<code>ObjectId</code>，类似于MySql的自增字段。</p>
+<p>MongoDB设计之初就是用于分布式环境，如果用自增字段，不同的数据库实例之间就会生成重复的id，为此，MongoDB采用了一个称之为ObjectId的类型来做主键。ObjectId是一个12字节的 <a href="http://docs.mongodb.org/manual/reference/glossary/#term-bson" target="_blank" rel="noopener">BSON</a> 类型字符串。按照字节顺序，依次代表：</p>
+<p>4字节：UNIX时间戳<br>3字节：表示运行MongoDB的机器<br>2字节：表示生成此_id的进程<br>3字节：由一个随机数开始的计数器生成的值</p>
+<h2 id="1-8-更新文档"><a href="#1-8-更新文档" class="headerlink" title="1.8 更新文档"></a>1.8 更新文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;update&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     upsert: &lt;boolean&gt;,</span><br><span class="line">     multi: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>query</strong> : update的查询条件，类似sql update查询内where后面的。</li>
+<li><strong>update</strong> : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的</li>
+<li><strong>upsert</strong> : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li><strong>multi</strong> : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li><strong>writeConcern</strong> :可选，抛出异常的级别。</li>
+</ul>
+<h2 id="1-9-删除文档"><a href="#1-9-删除文档" class="headerlink" title="1.9 删除文档"></a>1.9 删除文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.collection.remove(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     justOne: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>query</strong> :（可选）删除的文档的条件。</li>
+<li><strong>justOne</strong> : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li>
+<li><strong>writeConcern</strong> :（可选）抛出异常的级别。</li>
+</ul>
+<h2 id="1-10-查询文档"><a href="#1-10-查询文档" class="headerlink" title="1.10 查询文档"></a>1.10 查询文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find(query, projection)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>query</strong> ：可选，使用查询操作符指定查询条件</li>
+<li><strong>projection</strong> ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/23/mydoc/mongo简介/" data-id="ck0vuh92c0009a8vuwusj173f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/23/mydoc/pubg-custom-room/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/23/mydoc/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">通过js2py在Python中执行JavaScript</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/拼图匠2.1接口/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/vs code中集成cmder/">VS Code中集成Cmder</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/server_config/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/23/mydoc/pymongo用法/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
