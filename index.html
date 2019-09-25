@@ -1,1775 +1,877 @@
-<!DOCTYPE html>
-
-
-
-
-
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Hexo">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
 
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
-    },
-    sidebarPadding: 40
-  };
-</script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="keywords" content>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
-  };
-</script>
-
-  <title>Hexo</title>
-  
+<meta name="description" content>
 
 
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+    <!--Title-->
+
+<title>
+    
+    Hexo
+</title>
+
+<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
 
+<link rel="icon" href="/favicon.ico">
 
+    
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 </div>
 
 
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
-
-  </li>
-  </ul>
-
-    
-
-</nav>
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/mongodump/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/mongodump/" class="post-title-link" itemprop="url">Untitled</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:27:39 / Modified: 11:29:33" itemprop="dateCreated datePublished" datetime="2019-09-23T11:27:39+08:00">2019-09-23</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="title-mongodump导出表"><a href="#title-mongodump导出表" class="headerlink" title="title mongodump导出表"></a>title mongodump导出表</h2><h1 id="使用mongodump导出表"><a href="#使用mongodump导出表" class="headerlink" title="使用mongodump导出表"></a>使用mongodump导出表</h1><p>RT:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup mongodump -h DB_IP -uUSERNAME -pPASSWORD --authenticationDatabase admin --port DB_PORT -d gamecard -c poe_cdk -o /PATH_TO_SAVE &gt; LOG_FILE_NAME.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/" class="post-title-link" itemprop="url">通过js2py在Python中执行JavaScript</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="通过js2py在Python中执行JavaScript"><a href="#通过js2py在Python中执行JavaScript" class="headerlink" title="通过js2py在Python中执行JavaScript"></a>通过js2py在Python中执行JavaScript</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>官网:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; Js2Py is a full implementation of [ECMAScript 5.1](https://www.ecma-international.org/ecma-262/5.1/) in 100% pure Python. It works by translating JavaScript directly into Python. It means you can easily run JS from your Python code without installing large external engines like V8.</span><br><span class="line"></span><br><span class="line">&gt; Js2Py是完全用Python实现的ECMAScript 5.1的运行时。通过将JavaScript直接翻译成Python代码来实现。这意味着你可以很轻松的在你的Python代码中执行JavaScript而无需安装庞大的扩展引擎，比如V8。</span><br><span class="line"></span><br><span class="line">根据[git](https://github.com/PiotrDabkowski/Js2Py)上的描述，目前完整支持ECMAScript 5.1，ECMA Script 6还在实验阶段，使用es6的时候可以通过[Babel](https://github.com/babel/babel)来解决。</span><br><span class="line"></span><br><span class="line">## 安装</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">pip install js2py</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/拼图匠2.1接口/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/拼图匠2.1接口/" class="post-title-link" itemprop="url">Untitled</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="title-拼图匠2-1接口"><a href="#title-拼图匠2-1接口" class="headerlink" title="title:拼图匠2.1接口"></a>title:拼图匠2.1接口</h2><!-- TOC -->
-
-<ul>
-<li><a href="#拼图匠21接口">拼图匠2.1接口</a><ul>
-<li><a href="#1个人中心">1.个人中心</a><ul>
-<li><a href="#11-登陆-puzzlelogin">1.1 登陆 <code>/puzzle/login</code></a></li>
-<li><a href="#12-用户信息-puzzleuser-info">1.2 用户信息 <code>/puzzle/user-info</code></a></li>
-<li><a href="#13-签到-puzzlecheckin">1.3 签到 <code>/puzzle/checkin</code></a></li>
-<li><a href="#14-ai滤镜解锁状态-puzzleai-status">1.4 AI滤镜解锁状态 <code>/puzzle/ai-status</code></a></li>
-<li><a href="#15-解锁ai滤镜-puzzleai-unlock">1.5 解锁AI滤镜 <code>/puzzle/ai-unlock</code></a></li>
-<li><a href="#16-保存照片到私人相册-puzzlesave-album">1.6 保存照片到私人相册 <code>/puzzle/save-album</code></a></li>
-<li><a href="#17-魔盒中奖信息-puzzlemagic-win-info">1.7 魔盒中奖信息 <code>/puzzle/magic-win-info</code></a></li>
-<li><a href="#18-魔盒抽奖-puzzlemagic-lucy-draw">1.8 魔盒抽奖 <code>/puzzle/magic-lucy-draw</code></a></li>
-<li><a href="#19-金币流水-puzzleuser-coin-records">1.9 金币流水 <code>/puzzle/user-coin-records</code></a></li>
-</ul>
-</li>
-<li><a href="#2相册">2.相册</a><ul>
-<li><a href="#21-获取相册列表-puzzleuser-album">2.1 获取相册列表 <code>/puzzle/user-album</code></a></li>
-<li><a href="#22-分页获取相册详情-puzzlealbum-detail">2.2 分页获取相册详情 <code>/puzzle/album-detail</code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-
-<h1 id="拼图匠2-1接口"><a href="#拼图匠2-1接口" class="headerlink" title="拼图匠2.1接口"></a>拼图匠2.1接口</h1><h2 id="1-个人中心"><a href="#1-个人中心" class="headerlink" title="1.个人中心"></a>1.个人中心</h2><h3 id="1-1-登陆-puzzle-login"><a href="#1-1-登陆-puzzle-login" class="headerlink" title="1.1 登陆 /puzzle/login"></a>1.1 登陆 <code>/puzzle/login</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="string">"usercode"</span>: <span class="string">""</span>,</span><br><span class="line">	<span class="string">"nickname"</span>: <span class="string">"BB"</span>,</span><br><span class="line">	<span class="string">"avatar"</span>: <span class="string">"url"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"uid"</span>: <span class="string">"xxx"</span>	<span class="comment">//个人中心的用户id</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-用户信息-puzzle-user-info"><a href="#1-2-用户信息-puzzle-user-info" class="headerlink" title="1.2 用户信息 /puzzle/user-info"></a>1.2 用户信息 <code>/puzzle/user-info</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;        </span><br><span class="line">        <span class="string">"avatar"</span>: <span class="string">"http://cdn.tgp.qq.com/lol/images/resources/champions/22.png"</span>,	<span class="comment">//用户头像</span></span><br><span class="line">        <span class="string">"coin"</span>: <span class="number">30</span>,	<span class="comment">//金币数</span></span><br><span class="line">        <span class="string">"checkin"</span>: &#123;            </span><br><span class="line">            <span class="string">"total_check_id_days"</span>: <span class="number">3</span>,	<span class="comment">//昨日连续签到天数</span></span><br><span class="line">            <span class="string">"newbie_task"</span>: &#123;	<span class="comment">//新手任务</span></span><br><span class="line">				<span class="string">"mystery_gift"</span>: <span class="number">0</span>,</span><br><span class="line">				<span class="string">"first_checkin"</span>: <span class="number">1</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">"daily_task"</span>: &#123;		<span class="comment">//每日任务，数字表示完成次数</span></span><br><span class="line">            	<span class="string">"share_image"</span>: <span class="number">1</span>,	</span><br><span class="line">            	<span class="string">"checkin"</span>: <span class="number">1</span>,</span><br><span class="line">            	<span class="string">"open_magic_box"</span>: <span class="number">3</span></span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-签到-puzzle-checkin"><a href="#1-3-签到-puzzle-checkin" class="headerlink" title="1.3 签到 /puzzle/checkin"></a>1.3 签到 <code>/puzzle/checkin</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//1.今日已签到</span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4-AI滤镜解锁状态-puzzle-ai-status"><a href="#1-4-AI滤镜解锁状态-puzzle-ai-status" class="headerlink" title="1.4 AI滤镜解锁状态 /puzzle/ai-status"></a>1.4 AI滤镜解锁状态 <code>/puzzle/ai-status</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"lists"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/la_muse.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"la_muse"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"油画"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,	<span class="comment">//解锁消耗金币数</span></span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span>			<span class="comment">//是否已经解锁</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/feathers.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"feathers"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"彩色羽毛"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">false</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/edtaonisl.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"edtaonisl"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"印象主义"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/mosaic.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"mosaic"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"马赛克"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/udnie.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"udnie"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"油画"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/wave.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"wave"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"浮世绘"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/the_scream.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"the_scream"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"呐喊"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"logo"</span>: <span class="string">"http://private-datas.oss-cn-beijing.aliyuncs.com/images/black.jpg"</span>,</span><br><span class="line">                <span class="string">"name"</span>: <span class="string">"black"</span>,</span><br><span class="line">                <span class="string">"nickname"</span>: <span class="string">"素描"</span>,</span><br><span class="line">                <span class="string">"unlock_expend"</span>: <span class="number">50</span>,</span><br><span class="line">                <span class="string">"locked"</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-5-解锁AI滤镜-puzzle-ai-unlock"><a href="#1-5-解锁AI滤镜-puzzle-ai-unlock" class="headerlink" title="1.5 解锁AI滤镜 /puzzle/ai-unlock"></a>1.5 解锁AI滤镜 <code>/puzzle/ai-unlock</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name"</span>: la_muse,</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//1.金币不足，2.已经解锁</span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-6-保存照片到私人相册-puzzle-save-album"><a href="#1-6-保存照片到私人相册-puzzle-save-album" class="headerlink" title="1.6 保存照片到私人相册 /puzzle/save-album"></a>1.6 保存照片到私人相册 <code>/puzzle/save-album</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"filename"</span>: <span class="string">"xxx.jpg"</span>	<span class="comment">//通过upload上传的图片名</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-7-魔盒中奖信息-puzzle-magic-win-info"><a href="#1-7-魔盒中奖信息-puzzle-magic-win-info" class="headerlink" title="1.7 魔盒中奖信息 /puzzle/magic-win-info"></a>1.7 魔盒中奖信息 <code>/puzzle/magic-win-info</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"infomation"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">            	<span class="string">"user"</span>: <span class="string">"zhaowei"</span>,</span><br><span class="line">                <span class="string">"content"</span>: <span class="string">"兰博基尼5元代金券"</span>,</span><br><span class="line">                <span class="string">"time"</span>: <span class="number">1552295085</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-8-魔盒抽奖-puzzle-magic-lucy-draw"><a href="#1-8-魔盒抽奖-puzzle-magic-lucy-draw" class="headerlink" title="1.8 魔盒抽奖 /puzzle/magic-lucy-draw"></a>1.8 魔盒抽奖 <code>/puzzle/magic-lucy-draw</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	<span class="comment">//0.成功 1.次数不足 2.金币不足 </span></span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"award"</span>: &#123;</span><br><span class="line">            <span class="string">"type"</span>: <span class="number">1</span>,	<span class="comment">//1.金币 2.现金</span></span><br><span class="line">            <span class="string">"count"</span>: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-9-金币流水-puzzle-user-coin-records"><a href="#1-9-金币流水-puzzle-user-coin-records" class="headerlink" title="1.9 金币流水 /puzzle/user-coin-records"></a>1.9 金币流水 <code>/puzzle/user-coin-records</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"start"</span>: <span class="number">0</span>,		<span class="comment">//开始序号</span></span><br><span class="line">    <span class="string">"limit"</span>: <span class="number">20</span>,	<span class="comment">//数量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,	</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">    	<span class="string">"coin"</span>: <span class="number">50</span>,	<span class="comment">//用户当前金币数量</span></span><br><span class="line">    	<span class="string">"record"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"type"</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="string">"desc"</span>: <span class="string">"分享奖励"</span>,</span><br><span class="line">                <span class="string">"award"</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="string">"time"</span>: <span class="number">1552296276</span></span><br><span class="line">            &#125;</span><br><span class="line">    	]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-相册"><a href="#2-相册" class="headerlink" title="2.相册"></a>2.相册</h2><h3 id="2-1-获取相册列表-puzzle-user-album"><a href="#2-1-获取相册列表-puzzle-user-album" class="headerlink" title="2.1 获取相册列表 /puzzle/user-album"></a>2.1 获取相册列表 <code>/puzzle/user-album</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">        <span class="string">"lists"</span>:[</span><br><span class="line">            &#123;</span><br><span class="line">            	<span class="string">"id"</span>: <span class="number">123</span>,	<span class="comment">//相册id</span></span><br><span class="line">                <span class="string">"author"</span>: <span class="string">"二棒"</span>,</span><br><span class="line">                <span class="string">"create_time"</span>: <span class="number">1552286036</span>,</span><br><span class="line">                <span class="string">"cover_img"</span>: <span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1552296179869&amp;di=6fa038814548cd9b07c69072359efead&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201604%2F18%2F20160418131839_5fNxP.jpeg"</span>,</span><br><span class="line">                <span class="string">"type"</span>: <span class="number">1</span>	<span class="comment">//1.私人相册，2.用户相册</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-分页获取相册详情-puzzle-album-detail"><a href="#2-2-分页获取相册详情-puzzle-album-detail" class="headerlink" title="2.2 分页获取相册详情 /puzzle/album-detail"></a>2.2 分页获取相册详情 <code>/puzzle/album-detail</code></h3><ul>
-<li>req</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="string">"123"</span>,	<span class="comment">//登陆后对应的用户id</span></span><br><span class="line">    <span class="string">"photoalbum_id"</span>: <span class="number">123</span>,	<span class="comment">//相册id</span></span><br><span class="line">    <span class="string">"start"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"limit"</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"code"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"message"</span>: <span class="string">"xxx"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">         <span class="string">"photos"</span>: [</span><br><span class="line">             &#123;</span><br><span class="line">             	<span class="string">"time"</span>: <span class="number">1552296276</span>,</span><br><span class="line">             	<span class="string">"url"</span>: <span class="string">"https://123.jpg"</span>,</span><br><span class="line">             	<span class="string">"thumb"</span>: <span class="string">"https://123.jpg"</span></span><br><span class="line">         	&#125;</span><br><span class="line">         ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/vs code中集成cmder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/vs code中集成cmder/" class="post-title-link" itemprop="url">VS Code中集成Cmder</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="VS-Code中集成Cmder"><a href="#VS-Code中集成Cmder" class="headerlink" title="VS Code中集成Cmder"></a>VS Code中集成Cmder</h1><p>在配置文件中添加以下内容：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"terminal.integrated.shell.windows"</span>: <span class="string">"C:\\WINDOWS\\System32\\cmd.exe"</span>,</span><br><span class="line"><span class="string">"terminal.integrated.env.windows"</span>: &#123;<span class="string">"CMDER_ROOT"</span>: <span class="string">"g:\\cmder"</span>&#125;,</span><br><span class="line"><span class="string">"terminal.integrated.shellArgs.windows"</span>: [</span><br><span class="line">    <span class="string">"/k g:\\cmder\\vendor\\init.bat"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/server_config/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/server_config/" class="post-title-link" itemprop="url">Untitled</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <!-- TOC -->
-
-<ul>
-<li><a href="#服务器信息">服务器信息</a></li>
-<li><a href="#记录">记录</a><ul>
-<li><a href="#shadowsocks">shadowsocks</a></li>
-<li><a href="#nodejs">nodejs</a></li>
-<li><a href="#nginx">Nginx</a></li>
-<li><a href="#hexo">hexo</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-
-<h2 id="服务器信息"><a href="#服务器信息" class="headerlink" title="服务器信息"></a>服务器信息</h2><table>
-<thead>
-<tr>
-<th align="center">k</th>
-<th align="center">v</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">域名</td>
-<td align="center"><a href="http://www.childs.tech" target="_blank" rel="noopener">www.childs.tech</a></td>
-</tr>
-<tr>
-<td align="center">IP</td>
-<td align="center">103.230.123.202</td>
-</tr>
-<tr>
-<td align="center">root密码</td>
-<td align="center">******</td>
-</tr>
-</tbody></table>
-<h2 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h2><h3 id="shadowsocks"><a href="#shadowsocks" class="headerlink" title="shadowsocks"></a>shadowsocks</h3><ol>
-<li><p>安装shadowsocks<br>1.1 更新apt-get</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get update</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<p>   1.2 安装pip</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install python-pip</span><br></pre></td></tr></table></figure>
-
-
-<p>   1.3 安装shadowsocks</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install git +https://github.com/shadowsocks/shadowsocks.git@master</span><br></pre></td></tr></table></figure>
 
 
-<ol start="2">
-<li>启动服务(<strong>password为自己的密码</strong>)</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssserver -p 443 -k password -m aes-256-cfb</span><br></pre></td></tr></table></figure>
-
-<p>   或者后台启动<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start</span><br></pre></td></tr></table></figure></p>
-<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><ol>
-<li>安装</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install nodejs</span><br><span class="line">$ apt-get install nodejs-legacy</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>升级,需要安装n模块</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install n</span><br><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>安装cnpm使用淘宝镜像，后面都可以使用cnpm代替npm使用</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><ol>
-<li>安装nginx</li>
-</ol>
-<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ol>
-<li>安装hexo</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>建站</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p><strong>当前版本执行npm install无效，需要先删除node_modules目录后再执行</strong></p>
-<ol start="3">
-<li>启动服务</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>在服务器上搞了很久一直报错提示<code>local hexo not found in xxx</code>,在windows上又安装了一次，一切正常，后来想起来可能是服务器上的node版本过低了，尝试更新服务器的node版本后一切正常。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/pymongo用法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/pymongo用法/" class="post-title-link" itemprop="url">Untitled</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/pubg-api/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/pubg-api/" class="post-title-link" itemprop="url">PUBG API接口</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="PUBG-API-接口"><a href="#PUBG-API-接口" class="headerlink" title="PUBG API 接口"></a>PUBG API 接口</h1><h2 id="1-根据昵称获取玩家信息"><a href="#1-根据昵称获取玩家信息" class="headerlink" title="1. 根据昵称获取玩家信息"></a>1. 根据昵称获取玩家信息</h2><ul>
-<li><p>request</p>
-<blockquote>
-<p><a href="https://api.pubg.com/shards/steam/players?filter[playerNames]=$playerName" target="_blank" rel="noopener">https://api.pubg.com/shards/steam/players?filter[playerNames]=$playerName</a></p>
-</blockquote>
-</li>
-<li><p>response</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"data"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"player"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"account.7c20cb2e1e3d4331adcf712cec236602"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"titleId"</span>: <span class="string">"bluehole-pubg"</span>,</span><br><span class="line">        <span class="string">"shardId"</span>: <span class="string">"steam"</span>,</span><br><span class="line">        <span class="string">"createdAt"</span>: <span class="string">"2019-03-13T08:06:52Z"</span>,</span><br><span class="line">        <span class="string">"updatedAt"</span>: <span class="string">"2019-03-13T08:06:52Z"</span>,</span><br><span class="line">        <span class="string">"patchVersion"</span>: <span class="string">""</span>,</span><br><span class="line">        <span class="string">"name"</span>: <span class="string">"cheese_1109"</span>,</span><br><span class="line">        <span class="string">"stats"</span>: <span class="literal">null</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"relationships"</span>: &#123;</span><br><span class="line">        <span class="string">"assets"</span>: &#123;</span><br><span class="line">          <span class="string">"data"</span>: []</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"matches"</span>: &#123;</span><br><span class="line">          <span class="string">"data"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"53c2d0b0-3a66-4ab1-bfcc-21737441a712"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"7e0996bc-9d38-4d90-b186-5d7fa6300164"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"fcb1a2ee-6db5-4e29-bbe1-fc82412acdbe"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"7f3a0e1d-c713-46ac-b91e-8e9205f7cb85"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"471005cb-fe3b-4fa9-a996-316636cdd79c"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">"type"</span>: <span class="string">"match"</span>,</span><br><span class="line">              <span class="string">"id"</span>: <span class="string">"b448302f-3100-4b8e-90c5-8fd01074dc3b"</span></span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"links"</span>: &#123;</span><br><span class="line">        <span class="string">"self"</span>: <span class="string">"https://api.playbattlegrounds.com/shards/steam/players/account.7c20cb2e1e3d4331adcf712cec236602"</span>,</span><br><span class="line">        <span class="string">"schema"</span>: <span class="string">""</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"links"</span>: &#123;</span><br><span class="line">    <span class="string">"self"</span>: <span class="string">"https://api.pubg.com/shards/steam/players?filter[playerNames]=cheese_1109"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"meta"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-获取赛季信息"><a href="#2-获取赛季信息" class="headerlink" title="2.获取赛季信息"></a>2.获取赛季信息</h2><ul>
-<li>request</li>
-</ul>
-<blockquote>
-<p><a href="https://api.pubg.com/shards/steam/seasons" target="_blank" rel="noopener">https://api.pubg.com/shards/steam/seasons</a></p>
-</blockquote>
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"data"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-beta"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,	<span class="comment">//是否当前赛季</span></span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre1"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre2"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre3"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre4"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre5"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre6"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre7"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre8"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2017-pre9"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-01"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-02"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-03"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-04"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-05"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-06"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-07"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-08"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.2018-09"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.pc-2018-01"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"division.bro.official.pc-2018-02"</span>,</span><br><span class="line">      <span class="string">"attributes"</span>: &#123;</span><br><span class="line">        <span class="string">"isCurrentSeason"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="string">"isOffseason"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"links"</span>: &#123;</span><br><span class="line">    <span class="string">"self"</span>: <span class="string">"https://api.pubg.com/shards/steam/seasons"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"meta"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="获取游戏生涯"><a href="#获取游戏生涯" class="headerlink" title="获取游戏生涯"></a>获取游戏生涯</h2><ul>
-<li>request</li>
-</ul>
-<blockquote>
-<p><a href="https://api.pubg.com/shards/steam/players/account.7c20cb2e1e3d4331adcf712cec236602/seasons/lifetime" target="_blank" rel="noopener">https://api.pubg.com/shards/steam/players/account.7c20cb2e1e3d4331adcf712cec236602/seasons/lifetime</a></p>
-</blockquote>
-<ul>
-<li>response</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"data"</span>: &#123;</span><br><span class="line">    <span class="string">"type"</span>: <span class="string">"playerSeason"</span>,</span><br><span class="line">    <span class="string">"attributes"</span>: &#123;</span><br><span class="line">      <span class="string">"gameModeStats"</span>: &#123;</span><br><span class="line">        <span class="string">"duo"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">6</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">1644.6813</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">27</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">10</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">1670.6406</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">6</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">25</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">16</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">287.54767</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">1573.871</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">15</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">1573.871</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">6740.9175</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">3</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">15</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">1.5519471</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">13095.753</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">5</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">10705.616</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">57</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"duo-fpp"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"solo"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">1023.35284</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">25</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">2691.773</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">14</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">5</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">11</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">23</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">182.42343</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">1639.678</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">19</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">1639.678</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">6449.208</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">7</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">19</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">93.46404</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">10150.902</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">10553.341</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">71</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"solo-fpp"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">0</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"squad"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">183</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">2277.3452</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">494</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">243</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">44420.62</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">39</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">64</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">459</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">292</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">533.84607</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">1915.84</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">266</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">3</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">1915.84</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">54</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">317534.84</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">4</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">9</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">276</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">6</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">949.9076</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">7</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">223969.06</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">124</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">7</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">344167.5</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">1086</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">23</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">"squad-fpp"</span>: &#123;</span><br><span class="line">          <span class="string">"assists"</span>: <span class="number">6</span>,</span><br><span class="line">          <span class="string">"bestRankPoint"</span>: <span class="number">969.45544</span>,</span><br><span class="line">          <span class="string">"boosts"</span>: <span class="number">30</span>,</span><br><span class="line">          <span class="string">"dBNOs"</span>: <span class="number">17</span>,</span><br><span class="line">          <span class="string">"dailyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"dailyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"damageDealt"</span>: <span class="number">2399.5315</span>,</span><br><span class="line">          <span class="string">"days"</span>: <span class="number">7</span>,</span><br><span class="line">          <span class="string">"headshotKills"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">"heals"</span>: <span class="number">20</span>,</span><br><span class="line">          <span class="string">"killPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"kills"</span>: <span class="number">15</span>,</span><br><span class="line">          <span class="string">"longestKill"</span>: <span class="number">82.870544</span>,</span><br><span class="line">          <span class="string">"longestTimeSurvived"</span>: <span class="number">1876.581</span>,</span><br><span class="line">          <span class="string">"losses"</span>: <span class="number">20</span>,</span><br><span class="line">          <span class="string">"maxKillStreaks"</span>: <span class="number">2</span>,</span><br><span class="line">          <span class="string">"mostSurvivalTime"</span>: <span class="number">1876.581</span>,</span><br><span class="line">          <span class="string">"rankPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"rankPointsTitle"</span>: <span class="string">""</span>,</span><br><span class="line">          <span class="string">"revives"</span>: <span class="number">3</span>,</span><br><span class="line">          <span class="string">"rideDistance"</span>: <span class="number">14834.334</span>,</span><br><span class="line">          <span class="string">"roadKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"roundMostKills"</span>: <span class="number">4</span>,</span><br><span class="line">          <span class="string">"roundsPlayed"</span>: <span class="number">20</span>,</span><br><span class="line">          <span class="string">"suicides"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"swimDistance"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"teamKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"timeSurvived"</span>: <span class="number">11942.052</span>,</span><br><span class="line">          <span class="string">"top10s"</span>: <span class="number">7</span>,</span><br><span class="line">          <span class="string">"vehicleDestroys"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"walkDistance"</span>: <span class="number">16838.537</span>,</span><br><span class="line">          <span class="string">"weaponsAcquired"</span>: <span class="number">71</span>,</span><br><span class="line">          <span class="string">"weeklyKills"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"weeklyWins"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"winPoints"</span>: <span class="number">0</span>,</span><br><span class="line">          <span class="string">"wins"</span>: <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">"relationships"</span>: &#123;</span><br><span class="line">      <span class="string">"player"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: &#123;</span><br><span class="line">          <span class="string">"type"</span>: <span class="string">"player"</span>,</span><br><span class="line">          <span class="string">"id"</span>: <span class="string">"account.7c20cb2e1e3d4331adcf712cec236602"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesSolo"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesSoloFPP"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesDuo"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesDuoFPP"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesSquad"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"matchesSquadFPP"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: []</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="string">"season"</span>: &#123;</span><br><span class="line">        <span class="string">"data"</span>: &#123;</span><br><span class="line">          <span class="string">"type"</span>: <span class="string">"season"</span>,</span><br><span class="line">          <span class="string">"id"</span>: <span class="string">"lifetime"</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"links"</span>: &#123;</span><br><span class="line">    <span class="string">"self"</span>: <span class="string">"https://api.pubg.com/shards/steam/players/account.7c20cb2e1e3d4331adcf712cec236602/seasons/lifetime"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"meta"</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/pubg-custom-room/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/pubg-custom-room/" class="post-title-link" itemprop="url">Untitled</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <!-- TOC -->
-
-<ul>
-<li><a href="#pubg自定义房间属性">PUBG自定义房间属性</a><ul>
-<li><a href="#other-options">Other Options</a></li>
-<li><a href="#basic-options">Basic Options</a><ul>
-<li><a href="#player">Player</a></li>
-<li><a href="#game-play">Game Play</a></li>
-<li><a href="#environment">Environment</a></li>
-</ul>
-</li>
-<li><a href="#advanced-options">Advanced Options</a><ul>
-<li><a href="#vehicle-车辆">Vehicle 车辆</a></li>
-<li><a href="#weapon-武器">Weapon 武器</a></li>
-<li><a href="#attachment-配件">Attachment 配件</a></li>
-<li><a href="#consumables-消耗品">Consumables 消耗品</a></li>
-<li><a href="#equip-装备">Equip 装备</a></li>
-<li><a href="#etc">ETC</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-
-<h1 id="PUBG自定义房间属性"><a href="#PUBG自定义房间属性" class="headerlink" title="PUBG自定义房间属性"></a>PUBG自定义房间属性</h1><h2 id="Other-Options"><a href="#Other-Options" class="headerlink" title="Other Options"></a>Other Options</h2><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Game Mode</td>
-<td align="center">游戏模式</td>
-<td align="center"><code>Normal Mode</code>  <code>Zombie Mode</code></td>
-</tr>
-<tr>
-<td align="center">Server Region</td>
-<td align="center">服务器</td>
-<td align="center"><code>Asia</code></td>
-</tr>
-<tr>
-<td align="center">Map</td>
-<td align="center">地图</td>
-<td align="center"><code>Erangel</code> <code>Miramar</code></td>
-</tr>
-<tr>
-<td align="center">Weather</td>
-<td align="center">天气</td>
-<td align="center"><code>Sunny</code> <code>Rainy</code> <code>Sunny Clear</code> <code>Sunset</code> <code>Foggy</code></td>
-</tr>
-<tr>
-<td align="center">Perspective</td>
-<td align="center">视角</td>
-<td align="center"><code>Tpp</code> <code>FPP</code></td>
-</tr>
-</tbody></table>
-<h2 id="Basic-Options"><a href="#Basic-Options" class="headerlink" title="Basic Options"></a>Basic Options</h2><h3 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Player</td>
-<td align="center">玩家人数</td>
-<td align="center"><code>1 - 100</code></td>
-</tr>
-<tr>
-<td align="center">Team Players</td>
-<td align="center">队伍人数</td>
-<td align="center"><code>1 - 10</code></td>
-</tr>
-</tbody></table>
-<h3 id="Game-Play"><a href="#Game-Play" class="headerlink" title="Game Play"></a>Game Play</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">DBNO Revice</td>
-<td align="center">击倒但未淘汰开关</td>
-<td align="center"><code>ON - OFF</code></td>
-</tr>
-<tr>
-<td align="center">DBNO revice casting time</td>
-<td align="center">击倒拉起时间</td>
-<td align="center"><code>1s - 10s</code></td>
-</tr>
-<tr>
-<td align="center">DAMAGE</td>
-<td align="center">击倒血量下降速度</td>
-<td align="center"><code>0.1x - 2x</code></td>
-</tr>
-</tbody></table>
-<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Blue Zone</td>
-<td align="center">毒圈</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Circle Centralization Factor</td>
-<td align="center">毒圈中心比重</td>
-<td align="center"><code>-1x - 1x</code></td>
-</tr>
-<tr>
-<td align="center">Circle Speed</td>
-<td align="center">毒圈速度</td>
-<td align="center"><code>1x - 2x</code></td>
-</tr>
-<tr>
-<td align="center">Red Zone</td>
-<td align="center">轰炸区</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Start Time</td>
-<td align="center">轰炸开始时间</td>
-<td align="center"><code>0x25x - 5x</code></td>
-</tr>
-<tr>
-<td align="center">Life Time</td>
-<td align="center">轰炸次数</td>
-<td align="center"><code>0.1x - 5x</code></td>
-</tr>
-<tr>
-<td align="center">Explosion Warning Time</td>
-<td align="center">轰炸预警时间</td>
-<td align="center"><code>0.1x - 5x</code></td>
-</tr>
-<tr>
-<td align="center">RedZone Duration</td>
-<td align="center">轰炸持续时间</td>
-<td align="center"><code>0.2x - 5x</code></td>
-</tr>
-<tr>
-<td align="center">RedZone Area</td>
-<td align="center">轰炸区大小</td>
-<td align="center"><code>0.2x - 1.4x</code></td>
-</tr>
-<tr>
-<td align="center">Explosion Count</td>
-<td align="center">轰炸爆炸次数</td>
-<td align="center"><code>0.2x - 2x</code></td>
-</tr>
-<tr>
-<td align="center">Care Package Frequency</td>
-<td align="center">空投频率</td>
-<td align="center"><code>0x - 5x</code></td>
-</tr>
-<tr>
-<td align="center">Convert Dead Player to ObServer</td>
-<td align="center">死亡后切换到OB</td>
-<td align="center"><code>ON - OFF</code></td>
-</tr>
-</tbody></table>
-<h2 id="Advanced-Options"><a href="#Advanced-Options" class="headerlink" title="Advanced Options"></a>Advanced Options</h2><h3 id="Vehicle-车辆"><a href="#Vehicle-车辆" class="headerlink" title="Vehicle 车辆"></a>Vehicle 车辆</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Car / Motorbike</td>
-<td align="center">汽车/摩托</td>
-<td align="center"><code>0x - 1x</code></td>
-</tr>
-<tr>
-<td align="center">Boat</td>
-<td align="center">船</td>
-<td align="center"><code>0x - 1x</code></td>
-</tr>
-</tbody></table>
-<h3 id="Weapon-武器"><a href="#Weapon-武器" class="headerlink" title="Weapon 武器"></a>Weapon 武器</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Sniper Rifles</td>
-<td align="center">狙击</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Assault Rifles</td>
-<td align="center">步枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Hunting Rifles</td>
-<td align="center">猎枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">LMGs</td>
-<td align="center">轻机枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">SMGs</td>
-<td align="center">冲锋枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Shotguns</td>
-<td align="center">散弹枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Handguns</td>
-<td align="center">手枪</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Throwables</td>
-<td align="center">投掷物</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Melee</td>
-<td align="center">近战</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Crossbow</td>
-<td align="center">十字弩</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">### Attachment 配件</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">名称</td>
-<td align="center">描述</td>
-<td align="center">参数</td>
-</tr>
-<tr>
-<td align="center">:-:</td>
-<td align="center">:-:</td>
-<td align="center">:-:</td>
-</tr>
-<tr>
-<td align="center">Scope Attachments</td>
-<td align="center">瞄准镜</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Magazine Attachments</td>
-<td align="center">弹夹</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Muzzle Attachments</td>
-<td align="center">枪口</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Stock,Foregrip Attachments</td>
-<td align="center">枪托和握把</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-</tbody></table>
-<h3 id="Consumables-消耗品"><a href="#Consumables-消耗品" class="headerlink" title="Consumables 消耗品"></a>Consumables 消耗品</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Med kit</td>
-<td align="center">医疗箱</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">First aid</td>
-<td align="center">医疗包</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Bandage</td>
-<td align="center">绷带</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Pain killer</td>
-<td align="center">止痛药</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Energy drink</td>
-<td align="center">红牛</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Jerry can</td>
-<td align="center">油桶</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-</tbody></table>
-<h3 id="Equip-装备"><a href="#Equip-装备" class="headerlink" title="Equip 装备"></a>Equip 装备</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">描述</th>
-<th align="center">参数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Bag Lv1</td>
-<td align="center">1级包</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Bag Lv2</td>
-<td align="center">2级包</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Bag Lv3</td>
-<td align="center">3级包</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Helmet Lv1</td>
-<td align="center">1级头</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Helmet Lv2</td>
-<td align="center">2级头</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Helmet Lv3</td>
-<td align="center">3级头</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Armor Lv1</td>
-<td align="center">1级甲</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Armor Lv2</td>
-<td align="center">2级甲</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Armor Lv3</td>
-<td align="center">3级甲</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">### ETC</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">名称</td>
-<td align="center">描述</td>
-<td align="center">参数</td>
-</tr>
-<tr>
-<td align="center">:-:</td>
-<td align="center">:-:</td>
-<td align="center">:-:</td>
-</tr>
-<tr>
-<td align="center">Costumes</td>
-<td align="center">衣服</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-<tr>
-<td align="center">Ammunitions</td>
-<td align="center">弹药</td>
-<td align="center"><code>0x - 3x</code></td>
-</tr>
-</tbody></table>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/mongo简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/mongo简介/" class="post-title-link" itemprop="url">Mongo简介</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>[TOC]</p>
-<h1 id="Mongo简介"><a href="#Mongo简介" class="headerlink" title="Mongo简介"></a>Mongo简介</h1><h1 id="1-Mongo数据库介绍"><a href="#1-Mongo数据库介绍" class="headerlink" title="1.Mongo数据库介绍"></a>1.Mongo数据库介绍</h1><h1 id="1-1-NoSql"><a href="#1-1-NoSql" class="headerlink" title="1.1 NoSql"></a>1.1 NoSql</h1><p>MongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。</p>
-<p>举个简单的例子，假如我们有一个user表，用来存储用户的信息，其中包括uid、name、age，那么在MySQL这样的关系型数据库中，他可能长这样：</p>
-<table>
-<thead>
-<tr>
-<th>字段</th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>uid</td>
-<td>int</td>
-</tr>
-<tr>
-<td>name</td>
-<td>varchar(50)</td>
-</tr>
-<tr>
-<td>age</td>
-<td>int</td>
-</tr>
-</tbody></table>
-<p>在MongoDB中他可能长这样</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"uid"</span>: <span class="number">123</span>,</span><br><span class="line">    <span class="string">"name"</span>: <span class="string">"aaa"</span>,</span><br><span class="line">    <span class="string">"age"</span>: <span class="number">12</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>看上去似乎没什么区别，如果我们有一个需求，需要在数据库中存储用户的自定义信息，让用户自己来添加，比如<code>头像</code>、<code>地区</code>、<code>爱好</code>之类的，那么MySql就有点头疼了，你可能需要先在数据库中添加三个字段，然后才能进行Inset操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE user ADD avartar VARCHAR(255), area VARCHAR(50), favorite VARCHAR(50)</span><br></pre></td></tr></table></figure>
-
-<p>在MongoDB里面，我们什么都不需要操作，只需要向数据库里面写数据就行了，数据的存储没有固定的模式，数据的横向扩展是很容易的。</p>
-<h2 id="1-2-连接"><a href="#1-2-连接" class="headerlink" title="1.2 连接"></a>1.2 连接</h2><p>用工具，用代码，无论用啥，要使用数据库需要先进行连接，语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>mongodb://</strong> 这是固定的格式，必须要指定。</li>
-<li><strong>username:password@</strong> 可选项，如果设置，在连接数据库服务器之后，驱动都会尝试登陆这个数据库</li>
-<li><strong>host1</strong> 必须的指定至少一个host, host1 是这个URI唯一要填写的。它指定了要连接服务器的地址。如果要连接复制集，请指定多个主机地址。</li>
-<li><strong>portX</strong> 可选的指定端口，如果不填，默认为27017</li>
-<li><strong>/database</strong> 如果指定username:password@，连接并验证登陆指定数据库。若不指定，默认打开 test 数据库。</li>
-<li><strong>?options</strong> 是连接选项。如果不使用/database，则前面需要加上/。所有连接选项都是键值对name=value，键值对之间通过&amp;或;（分号）隔开</li>
-</ul>
-<p>这其实就是一个标准的URL格式。</p>
-<h2 id="1-3-创建数据库"><a href="#1-3-创建数据库" class="headerlink" title="1.3 创建数据库"></a>1.3 创建数据库</h2><h2 id="1-4-删除数据库"><a href="#1-4-删除数据库" class="headerlink" title="1.4 删除数据库"></a>1.4 删除数据库</h2><h2 id="1-5-创建集合"><a href="#1-5-创建集合" class="headerlink" title="1.5 创建集合"></a>1.5 创建集合</h2><p>MongoDB数据库中，用集合(<code>collection</code>)来表示关系数据库中的表(<code>table</code>)，通常情况下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(name, options)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>name: 要创建的集合名称</li>
-<li>options: 可选参数, 指定有关内存大小及索引的选项</li>
-</ul>
-<p>通常情况下，MongoDB不需要事先创建集合，系统会在用户插入文档的适合自动创建，当然，处于规范，一般会由DBA先创建需要的集合以及相应的<code>索引</code></p>
-<h2 id="1-6-删除集合"><a href="#1-6-删除集合" class="headerlink" title="1.6 删除集合"></a>1.6 删除集合</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.drop()</span><br></pre></td></tr></table></figure>
-
-<p>希望你不会用到这条命令。</p>
-<h2 id="1-7-插入文档"><a href="#1-7-插入文档" class="headerlink" title="1.7 插入文档"></a>1.7 插入文档</h2><p>插入一条文档：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insert(document)</span><br></pre></td></tr></table></figure>
-
-<p>这里的document和<code>Json</code>格式基本一致，所有存储在集合中的数据都是<code>BSON</code>格式。<code>BSON</code> 是一种类似 <code>Json</code>的二进制形式的存储格式，是 <code>Binary JSON</code> 的简称。具体细节可以查看官方文档</p>
-<p>插入多条文档：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insertMany(document_array)</span><br></pre></td></tr></table></figure>
-
-<p><strong>尽量不要在循环中执行insert来一条一条的插入数据，应该使用insertMany来处理需要一次性插入多条数据的场景</strong></p>
-<h3 id="1-7-1-ObjectId"><a href="#1-7-1-ObjectId" class="headerlink" title="1.7.1 ObjectId"></a>1.7.1 ObjectId</h3><p>MongoDb会为每一条文档添加一个<code>_id</code>字段，类型是<code>ObjectId</code>，类似于MySql的自增字段。</p>
-<p>MongoDB设计之初就是用于分布式环境，如果用自增字段，不同的数据库实例之间就会生成重复的id，为此，MongoDB采用了一个称之为ObjectId的类型来做主键。ObjectId是一个12字节的 <a href="http://docs.mongodb.org/manual/reference/glossary/#term-bson" target="_blank" rel="noopener">BSON</a> 类型字符串。按照字节顺序，依次代表：</p>
-<p>4字节：UNIX时间戳<br>3字节：表示运行MongoDB的机器<br>2字节：表示生成此_id的进程<br>3字节：由一个随机数开始的计数器生成的值</p>
-<h2 id="1-8-更新文档"><a href="#1-8-更新文档" class="headerlink" title="1.8 更新文档"></a>1.8 更新文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;update&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     upsert: &lt;boolean&gt;,</span><br><span class="line">     multi: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>query</strong> : update的查询条件，类似sql update查询内where后面的。</li>
-<li><strong>update</strong> : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的</li>
-<li><strong>upsert</strong> : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
-<li><strong>multi</strong> : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
-<li><strong>writeConcern</strong> :可选，抛出异常的级别。</li>
-</ul>
-<h2 id="1-9-删除文档"><a href="#1-9-删除文档" class="headerlink" title="1.9 删除文档"></a>1.9 删除文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.collection.remove(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     justOne: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>query</strong> :（可选）删除的文档的条件。</li>
-<li><strong>justOne</strong> : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。</li>
-<li><strong>writeConcern</strong> :（可选）抛出异常的级别。</li>
-</ul>
-<h2 id="1-10-查询文档"><a href="#1-10-查询文档" class="headerlink" title="1.10 查询文档"></a>1.10 查询文档</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find(query, projection)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>query</strong> ：可选，使用查询操作符指定查询条件</li>
-<li><strong>projection</strong> ：可选，使用投影操作符指定返回的键。查询时返回文档中所有键值， 只需省略该参数即可（默认省略）。</li>
-</ul>
-
-        
-      
-    </div>
-
-    
     
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/23/mydoc/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/mydoc/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-09-23 11:21:19" itemprop="dateCreated datePublished" datetime="2019-09-23T11:21:19+08:00">2019-09-23</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">17</span>
-          <span class="site-state-item-name">posts</span>
+</head></html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    http://snippet.shenliyang.com/img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='John Doe'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
         </a>
-      </div>
-    
-  </nav>
-
-
-
-      </div>
-
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+        </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        Hexo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                Home</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa "></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa "></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/工具/"><i class="fa "></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content ">
+                    
+<div class="carousel">
+    <a href="https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=xs0pypd2" target="_blank">
+        <img src="/./img/head-img.jpg" alt="">
+    </a>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
 
+
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/25/mydoc/使用NodeJS在MongoDB中生成测试数据/">
+                    使用NodeJS在MongoDB中生成测试数据</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月25日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            使用NodeJS在MongoDB中生成测试数据先说下背景：
+
+项目中有个需求，需要保存玩家近3个月的游戏历史记录，用于查询。
+
+我们估算了下，一天有将近1000w条游戏数据，之前只对获奖的数据进行入库，并且有过期索引，数据量不大。这一...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
         
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/25/mydoc/使用NodeJS在MongoDB中生成测试数据/" class="btn btn-default">
+                Read</a>
+        </div>
     </footer>
-  </div>
-
-  
-
-
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+    
+</article>
 
 
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/mongodump/">
+                    mongodump导出表</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            使用mongodump导出表RT:
+1nohup mongodump -h DB_IP -uUSERNAME -pPASSWORD --authenticationDatabase admin --port DB_PORT -d ga...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/mongodump/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
 
-  
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/">
+                    通过js2py在Python中执行JavaScript</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            通过js2py在Python中执行JavaScript简介官网:1234567891011&amp;gt; Js2Py is a full implementation of [ECMAScript 5.1](https://www.ecma...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/通过js2py在Python中执行JavaScript/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/vs code中集成cmder/">
+                    VS Code中集成Cmder</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            VS Code中集成Cmder在配置文件中添加以下内容：
+12345&#34;terminal.integrated.shell.windows&#34;: &#34;C:\\WINDOWS\\System32\\cmd.exe&#34;,&#34;terminal.int...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/vs code中集成cmder/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/server_config/">
+                    </a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            
+
+
+服务器信息
+记录
+shadowsocks
+nodejs
+Nginx
+hexo
 
 
 
 
 
+服务器信息
+
+
+k
+v
 
 
 
+域名
 
 
 
+IP
 
 
 
+root密码
+******
+
+
+记录shadowsocks
+安装shadowsocks...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/server_config/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/pymongo用法/">
+                    </a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/pymongo用法/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/mongo简介/">
+                    Mongo简介</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            [TOC]
+Mongo简介1.Mongo数据库介绍1.1 NoSqlMongoDB属于NoSql数据库，NoSql数据库和传统的关系型数据库不一样，属于非关系型数据库。
+举个简单的例子，假如我们有一个user表，用来存储用户的信息，其...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/mongo简介/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/Ubuntu下安装PyV8/">
+                    Ubuntu下安装PyV8</a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            123456#!/bin/shsudo aptitude install scons libboost-python-dev libboost-system-dev libboost-thread-devsvn checkout ht...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/Ubuntu下安装PyV8/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/README/">
+                    </a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            mydoc介绍平时用到的技术文档整理
+软件架构软件架构说明
+安装教程
+xxxx
+xxxx
+xxxx
+
+使用说明
+xxxx
+xxxx
+xxxx
+
+参与贡献
+Fork 本仓库
+新建 Feat_xxx 分支
+提交代码
+新建 Pull Req...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/README/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <div class="post-head home-post-head">
+            <h1 class="post-title">
+                <a href="/2019/09/23/mydoc/README.en/">
+                    </a>
+            </h1>
+            <div class="post-meta"> &bull;
+                <time class="post-date" datetime="" title="">
+                    2019年09月23日
+                </time>
+            </div>
+        </div>
+        <p class="brief">
+            
+            mydocDescription平时用到的技术文档整理
+Software ArchitectureSoftware architecture description
+Installation
+xxxx
+xxxx
+xxxx
+
+Instr...
+            
+        </p>
+    </div>
+    
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+</div>
+        </div>
+        <div class="post-permalink">
+            <a href="/2019/09/23/mydoc/README.en/" class="btn btn-default">
+                Read</a>
+        </div>
+    </footer>
+    
+</article>
 
 
 
+<nav class="pagination" role="navigation">
+    <div id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class='fa fa-angle-right'></i></a>
+    </div>
+</nav>
+
+                </main>
+                
+                    
+<aside class="col-md-4 sidebar">
+    
+    
+<div class="widget">
+    <h3 class="title">
+        Search
+    </h3>
+    <div id="search-form">
+        <div id="result-mask" class="hide"></div>
+        <div class="search-area">
+            
+            <input id="search-key" type="search" autocomplete="off" placeholder="Search What？">
+            <button type="button" class="search-form-submit" id="search-local">
+                localSearch</button>
+            
+            
+        </div>
+        <div id="result-wrap" class="hide">
+            <div id="search-result"></div>
+        </div>
+        <div class="hide">
+            <template id="search-tpl">
+                <div class="item">
+                    <a href="/{path}" title="{title}">
+                        <div class="title">{title}</div>
+                        <div class="content">{content}</div>
+                    </a>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        Notification
+    </h3>
+    <div class="notification">
+        <p>
+    主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+    主题使用：<a href="https://github.com/shenliyang/hexo-theme-snippet/blob/master/README.md#常见问题" title="" target="_blank">常见使用问题</a> <br/>
+    支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+    </div>
+</div>
+
+    
+    
+<div class="widget">
+    <h3 class="title">
+        Social
+    </h3>
+    <div class="content social">
+        
+        <a href="//github.com/shenliyang" rel="external nofollow" title="Github" target="_blank">
+            <i class="git fa fa-git"></i>
+        </a>
+        
+        <a href="mailto:snippet@91h5.cc" rel="external nofollow" title="邮箱" target="_blank">
+            <i class="envelope-o fa fa-envelope-o"></i>
+        </a>
+        
+        <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+            <i class="qq fa fa-qq"></i>
+        </a>
+        
+        <a href="/" rel="external nofollow" title="微信" target="_blank">
+            <i class="weixin fa fa-weixin"></i>
+        </a>
+        
+        <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+            <i class="users fa fa-users"></i>
+        </a>
+        
+        <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+            <i class="feed fa fa-feed"></i>
+        </a>
+        
+    </div>
+</div>
+
+    
+    
+    
+    
+<div class="widget">
+    <h3 class="title">
+        Archives
+    </h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/"><i class="fa" aria-hidden="true">2019年09月</i></a><span class="archive-list-count">14</span></li></ul>
+</div>
+
+    
+    
+    
+    
+<div class="widget">
+    <h3 class="title">
+        Friends
+    </h3>
+    <div class="content friends-link">
+        
+        <a href="https://hexo.io/zh-cn/" class="fa" target="_blank">
+            Hexo官网</a>
+        
+    </div>
+</div>
+
+    
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/search.js?rev=@@hash"></script>
 
 
 
-
-  
-
-  
-
-  
-
+<script src="/js/app.js?rev=@@hash"></script>
 </body>
 </html>
